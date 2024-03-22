@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es2020",
-    "module": "es2020",
+    "target": "es6",
+    "module": "es6", 
     "strict": true,
     "esModuleInterop": true,
+    "lib": ["es6", "dom"], 
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["Scripts/**/*.ts"] // Используй двойные звёздочки для включения всех TS файлов в папке и подпапках
+  "include": ["Scripts/*.ts"]
 }
