@@ -16,7 +16,9 @@ export async function fetchAstronomyPictureOfTheDay(): Promise<ApodResponse | nu
         throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data: ApodResponse = await response.json();
-        return data;
+    console.log(data); // Временно добавить для проверки ответа
+    return data;
+    
     } catch (error) {
         console.error("Ошибка при запросе к API NASA: ", error);
         return null;
