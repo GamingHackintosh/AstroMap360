@@ -1,14 +1,54 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
+html, body {
+    height: 100%;
+    margin: 0;
+    background: #0e0e10;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}  
+header, footer {
+    padding: 1rem;
+    text-align: center;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #apod {
-    text-align: center;
-    padding: 20px;
+    max-width: 80%;
+    margin: auto;
 }
 #apodImage {
-    max-width: 50%; 
-    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+#apodTitle {
+    margin: 20px 0;
+    font-size: 2rem;
+}
+#apodDescription {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+
+/*===== Самый низ =====*/ 
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
