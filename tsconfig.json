@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es2015", // Изменил здесь на es2015
-    "module": "commonjs",
+    "target": "es2015",
+    "module": "es2015",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,

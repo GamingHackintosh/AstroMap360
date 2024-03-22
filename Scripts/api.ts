@@ -9,7 +9,7 @@ const API_KEY = 'AkrAPSTudQbZDrOqWI1RdTaWmAK6bnjcFycwe1eb';
 const APOD_URL = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`;
 
 // TypeScript: функция для запроса к API с уточнённым возвращаемым типом
-async function fetchAstronomyPictureOfTheDay(): Promise<ApodResponse | null> {
+export async function fetchAstronomyPictureOfTheDay(): Promise<ApodResponse | null> {
     try {
         const response = await fetch(APOD_URL);
     if (!response.ok) {
@@ -22,5 +22,3 @@ async function fetchAstronomyPictureOfTheDay(): Promise<ApodResponse | null> {
         return null;
     }
 }
-
-export { fetchAstronomyPictureOfTheDay };
