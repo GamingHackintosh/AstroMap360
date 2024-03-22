@@ -1,4 +1,4 @@
-const API_KEY = 'AkrAPSTudQbZDrOqWI1RdTaWmAK6bnjcFycwe1eb'; // Замени 'DEMO_KEY' на твой реальный API ключ
+const API_KEY = 'AkrAPSTudQbZDrOqWI1RdTaWmAK6bnjcFycwe1eb';
 const APOD_URL = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`;
 
 async function fetchAstronomyPictureOfTheDay() {
