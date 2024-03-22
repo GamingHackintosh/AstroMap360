@@ -1,4 +1,4 @@
-import { fetchAstronomyPictureOfTheDay } from 'api.js';
+import { fetchAstronomyPictureOfTheDay } from '../API/api.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     console.log('AstroMap360 загружен и готов к работе!');

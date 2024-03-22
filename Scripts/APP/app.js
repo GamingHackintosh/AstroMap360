@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { fetchAstronomyPictureOfTheDay } from 'api.js';
+import { fetchAstronomyPictureOfTheDay } from '../API/api.js';
 document.addEventListener('DOMContentLoaded', () => __awaiter(void 0, void 0, void 0, function* () {
     console.log('AstroMap360 загружен и готов к работе!');
     const apodData = yield fetchAstronomyPictureOfTheDay();
