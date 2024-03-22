@@ -1,17 +1,35 @@
+/*=== Настройки разметки ==*/
 html, body {
     height: 100%;
     margin: 0;
-    background: #0e0e10;
     color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;
-}  
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 header, footer {
     padding: 1rem;
     text-align: center;
 }
+
+body {
+    background: url('../assets/images/background-1.webp') repeat;
+    background-size: cover;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
 main {
     display: flex;
     justify-content: center;

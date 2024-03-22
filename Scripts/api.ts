@@ -16,7 +16,7 @@ export async function fetchAstronomyPictureOfTheDay(): Promise<ApodResponse | nu
         throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data: ApodResponse = await response.json();
-    console.log(data); // Временно добавить для проверки ответа
+    console.log(data);
     return data;
     
     } catch (error) {
