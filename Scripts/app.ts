@@ -1,10 +1,16 @@
+import { fetchAstronomyPictureOfTheDay } from './api'; // Импортируем функцию из api.ts
+
 document.addEventListener('DOMContentLoaded', async () => {
     console.log('AstroMap360 загружен и готов к работе!');
     const apodData = await fetchAstronomyPictureOfTheDay();
-    if (apodData) {
-        console.log('Изображение дня от NASA:', apodData);
-        document.getElementById('apodImage').src = apodData.url;
-        document.getElementById('apodTitle').textContent = apodData.title;
-        document.getElementById('apodDescription').textContent = apodData.explanation;
-    }
+    const apodImage = document.getElementById('apodImage') as HTMLImageElement | null;
+    const apodTitle = document.getElementById('apodTitle');
+    const apodDescription = document.getElementById('apodDescription');
+
+if (apodData && apodImage && apodTitle && apodDescription) {
+    console.log('Изображение дня от NASA:', apodData);
+    apodImage.src = apodData.url;
+    apodTitle.textContent = apodData.title;
+    apodDescription.textContent = apodData.explanation;
+}
 });

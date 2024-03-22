@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es5",                          
-    "module": "commonjs",                     
-    "strict": true,                           
-    "esModuleInterop": true,                  
-    "skipLibCheck": true,                     
-    "forceConsistentCasingInFileNames": true  
+    "target": "es2015", // Изменил здесь на es2015
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["Scripts/**/*"]
 }
