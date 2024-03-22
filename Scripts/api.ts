@@ -1,5 +1,5 @@
-const API_KEY = 'AkrAPSTudQbZDrOqWI1RdTaWmAK6bnjcFycwe1eb';
 const APOD_URL = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`;
+const API_KEY = 'AkrAPSTudQbZDrOqWI1RdTaWmAK6bnjcFycwe1eb';
 
 async function fetchAstronomyPictureOfTheDay() {
     try {
