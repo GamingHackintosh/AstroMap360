@@ -1,0 +1,31 @@
+/*===== Адаптация =====*/
+/* Стили для маленьких экранов (мобильные телефоны) */
+@media (max-width: 600px) {
+    main {
+        padding: 1rem; 
+    }
+
+    #apod {
+        width: 95%; 
+        margin: 0.5rem; 
+    }
+    #apodImage {
+        border-radius: 5px;
+    }
+    #apodTitle {
+        font-size: 1.5rem; 
+        margin: 0.5rem 0; 
+    }
+    #apodDescription {
+        font-size: 0.9rem; 
+        margin-bottom: 1rem; 
+    }
+
+    footer {
+        padding: 1rem 0.5rem; 
+        font-size: 0.8rem; 
+    }
+    footer::before {
+        background: rgba(0, 0, 0, 0.7);
+    }
+}
