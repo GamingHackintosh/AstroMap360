@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/adaptation.css">
-    <title>AstroMap360</title>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="PictureDay/index.html">Фото дня от NASA</a></li>
-        </ul>
-    </nav>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="style/reset.css">
+        <link rel="stylesheet" href="style/adaptation.css">
+        <link rel="stylesheet" href="style/planet.css">
+        <title>AstroMap360</title>
+    </head>
+    <body>
+        <header>
+            <section class="planet-gallery">
+                <div class="planet-gallery_img">
+                    <img src="assets/images/Planet/Mercury.png" alt="Меркурий" onclick="scrollToSection('Mercury')">
+                    <img src="assets/images/Planet/Venus.png" alt="Венера" onclick="scrollToSection('Venus')">
+                    <img src="assets/images/Planet/Earth.png" alt="Земля" onclick="scrollToSection('Earth')">
+                    <img src="assets/images/Planet/Moon.png" alt="Луна" onclick="scrollToSection('Moon')">
+                    <img src="assets/images/Planet/Mars.png" alt="Марс" onclick="scrollToSection('Mars')">
+                    <img src="assets/images/Planet/Jupiter.png" alt="Юпитер" onclick="scrollToSection('Jupiter')">
+                    <img src="assets/images/Planet/Saturn.png" alt="Сатурн" onclick="scrollToSection('Saturn')">
+                    <img src="assets/images/Planet/Uranus.png" alt="Уран" onclick="scrollToSection('Uranus')">
+                    <img src="assets/images/Planet/Neptune.png" alt="Нептун" onclick="scrollToSection('Neptune')">
+                </div>
+            </section>
+        </header>
 
-    <main>
+        <nav>
+            <ul>
+                <li><a href="PictureDay/index.html">Фото дня от NASA</a></li>
+            </ul>
+        </nav>
 
-    </main>
-    
+        <main>
+            
+        </main>
+        
 
-    <footer>
-        <p>&copy; г. 2024 @GamingHackintosh. All Rights Reserved.</p>
-    </footer>
+        <footer>
+            <p>&copy; г. 2024 @GamingHackintosh. All Rights Reserved.</p>
+        </footer>
 
-</body>
+    </body>
 </html>

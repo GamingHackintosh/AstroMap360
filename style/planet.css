@@ -1,0 +1,32 @@
+.planet-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    overflow-x: auto;
+    border-radius: 100px;
+    background: url("../assets/images/backround/background-2.jpg");
+}
+
+.planet-gallery img {
+    width: 60px;
+    margin: 0 5px; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.planet-gallery_img :hover {
+    transform: translateY(-5px);
+}
+
+
+[data-planet="Mercury"] { background-image: url('../assets/images/Planet/Mercury.png'); }
+[data-planet="Venus"] { background-image: url('../assets/images/Planet/Venus.png'); }
+[data-planet="Earth"] { background-image: url('../assets/images/Planet/Earth.png'); }
+[data-planet="Moon"] { background-image: url('../assets/images/Planet/Mars.png'); } 
+[data-planet="Mars"] { background-image: url('../assets/images/Planet/Mars.png'); }
+[data-planet="Jupiter"] { background-image: url('../assets/images/Planet/Jupiter.png'); }
+[data-planet="Saturn"] { background-image: url('../assets/images/Planet/Saturn.png'); }
+[data-planet="Uranus"] { background-image: url('../assets/images/Planet/Uranus.png'); }
+[data-planet="Neptune"] { background-image: url('../assets/images/Planet/Neptune.png'); }

@@ -1,5 +1,5 @@
 body {
-    background: url('../assets/images/background-1.webp') repeat;
+    background: url('../assets/images/backround/background-1.webp') repeat;
     background-size: cover;
 }
 body::before {
@@ -12,6 +12,7 @@ body::before {
     background: rgba(0, 0, 0, 0.5);
     z-index: -1;
 }
+
 
 
 main {
