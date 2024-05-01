@@ -32,8 +32,7 @@ nav {
     padding: 30px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
-
-a:hover, a:focus {
+nav:hover, nav:focus, nav a:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: #FFD700;
 }
@@ -45,8 +44,6 @@ a:hover, a:focus {
 footer {
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,4 +58,7 @@ footer::before {
     bottom: 0;
     left: 0;
     z-index: -1;
+}
+footer :hover p {
+    color: aqua;
 }

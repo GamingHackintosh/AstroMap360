@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- СТИЛИ -->
         <link rel="stylesheet" href="style/main.css">
         <link rel="stylesheet" href="style/reset.css">
         <link rel="stylesheet" href="style/adaptation.css">
@@ -13,7 +14,7 @@
         <header>
             <section class="planet-gallery">
                 <div class="planet-gallery_img">
-                    <img src="assets/images/Planet/Mercury.png" alt="Меркурий" onclick="scrollToSection('Mercury')">
+                    <img src="assets/images/Planet/Mercury.png" alt="Меркурий" onclick="scrollToSection('Mercury')" id="Mercury">
                     <img src="assets/images/Planet/Venus.png" alt="Венера" onclick="scrollToSection('Venus')">
                     <img src="assets/images/Planet/Earth.png" alt="Земля" onclick="scrollToSection('Earth')">
                     <img src="assets/images/Planet/Moon.png" alt="Луна" onclick="scrollToSection('Moon')">
@@ -33,7 +34,17 @@
         </nav>
 
         <main>
-            
+            <div class="planet-info">
+                <section class="Mercury" id="Mercury">
+                    <div class="Planet_content">
+                        <h2>Меркурий</h2>
+                        <p>Меркурий — это самая маленькая и ближайшая к Солнцу планета в нашей Солнечной системе. Её поверхность похожа на поверхность Луны. Она имеет много кратеров и высокие температуры.</p>
+                    </div>
+                    <div class="Planet_image">
+                        <img src="assets/images/Planet_Surface/Mercury_Surface.jpg" alt="Поверхность Меркурия">
+                    </div>
+                </section>
+            </div>
         </main>
         
 
