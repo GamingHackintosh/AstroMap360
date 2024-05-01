@@ -58,7 +58,6 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 .Mercury:hover {
-    transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8); 
 }
 
@@ -73,6 +72,9 @@
     text-align: right; 
 }
 
+.Planet_content {
+    padding: 20px;
+}
 .Mercury h2 {
     font-size: 28px;
     color: #FFD700;

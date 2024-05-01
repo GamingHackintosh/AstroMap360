@@ -4,24 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astronomy Picture of the Day</title>
-    <link rel="stylesheet" href="CSS/main.css">
+
+    <!-- СТИЛИ -->
+    <link rel="stylesheet" href="assets/CSS/main.css">
+    <link rel="stylesheet" href="assets/CSS/reset.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+15&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+15&family=Pacifico&display=swap">
 </head>
 <body>
     <main>
-        <div id="apod">
-            <img id="apodImage" alt="Astronomy Picture of the Day">
-            <p id="apodTitle"></p>
-            <p id="apodDescription"></p>
-        </div>
+        <section id="apod">
+            <div id="apod-container">
+                <div id="apod-image">
+                    <img id="apodImage" alt="Astronomy Picture of the Day">
+                </div>
+
+                <div id="apod-Text">
+                    <p id="apodTitle"></p>
+                    <p id="apodDescription"></p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; г. 2024 @GamingHackintosh. All Rights Reserved.</p>
     </footer>
 
-    <script type="module" src="Scripts/APP/app.js"></script>
+    <script type="module" src="assets/Scripts/APP/app.js"></script>
 </body>
 </html>

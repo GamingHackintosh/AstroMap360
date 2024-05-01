@@ -12,23 +12,6 @@ main {
     position: relative;
     z-index: 1;
 }
-
-#apodImage {
-    width: 70%;
-}
-#apodTitle, #apodDescription {
-    color: #fff;
-}
-#apodTitle {
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-}
-
-
-
-
 /*===== Самый низ =====*/ 
 footer {
     color: #fff;
@@ -59,10 +42,15 @@ footer::before {
 #apod {
     width: 50%;
     margin: auto;
-    transition: transform 0.3s ease-in-out;
 }
 #apod:hover {
     transform: scale(1.05);
+}
+#apod-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 20px; 
+    align-items: center; 
 }
 
 /* Стили для изображения дня */
@@ -76,13 +64,19 @@ footer::before {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.75);
 }
 
-/* Стили для заголовка и описания изображения */
-#apodTitle {
-    font-size: 2rem;
-    margin: 1rem 0;
+#apod-image {
+    grid-column: 1 / 2; 
+    transition: transform 0.3s ease-in-out;
 }
-#apodDescription {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+
+#apod-Text {
+    grid-column: 2 / 3; 
+    color: #fff;
+}
+
+#apodTitle {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
 }
