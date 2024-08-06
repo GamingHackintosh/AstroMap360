@@ -1,56 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- СТИЛИ -->
-        <link rel="stylesheet" href="style/main.css">
-        <link rel="stylesheet" href="style/reset.css">
-        <link rel="stylesheet" href="style/adaptation.css">
-        <link rel="stylesheet" href="style/planet.css">
-        <title>AstroMap360</title>
-    </head>
-    <body>
-        <header>
-            <section class="planet-gallery">
-                <div class="planet-gallery_img">
-                    <img src="assets/images/Planet/Mercury.png" alt="Меркурий" onclick="scrollToSection('Mercury')" id="Mercury">
-                    <img src="assets/images/Planet/Venus.png" alt="Венера" onclick="scrollToSection('Venus')">
-                    <img src="assets/images/Planet/Earth.png" alt="Земля" onclick="scrollToSection('Earth')">
-                    <img src="assets/images/Planet/Moon.png" alt="Луна" onclick="scrollToSection('Moon')">
-                    <img src="assets/images/Planet/Mars.png" alt="Марс" onclick="scrollToSection('Mars')">
-                    <img src="assets/images/Planet/Jupiter.png" alt="Юпитер" onclick="scrollToSection('Jupiter')">
-                    <img src="assets/images/Planet/Saturn.png" alt="Сатурн" onclick="scrollToSection('Saturn')">
-                    <img src="assets/images/Planet/Uranus.png" alt="Уран" onclick="scrollToSection('Uranus')">
-                    <img src="assets/images/Planet/Neptune.png" alt="Нептун" onclick="scrollToSection('Neptune')">
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroMap360</title>
+
+    <!--- CSS --->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/keyframes.css">
+    <link rel="stylesheet" href="assets/css/head.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/cards.css">
+</head>
+<body>
+    <header>
+        <h1>AstroMap360</h1>
+        <p>Интерактивная карта звёздного неба</p>
+    </header>
+
+    <main>
+        <div class="cards container">
+            <section class="welcome-section card">
+                <h2>Добро пожаловать в AstroMap360!</h2>
+                <p>Исследуйте космос с помощью наших интерактивных инструментов и данных от NASA.</p>
             </section>
-        </header>
 
-        <nav>
-            <ul>
-                <li><a href="PictureDay/index.html">Фото дня от NASA</a></li>
-            </ul>
-        </nav>
+            <section class="picture-day-section card">
+                <h3>Изображение дня от NASA</h3>
+                <p>Просмотрите удивительные космические фотографии и узнайте больше о космосе.</p>
+                <a href="pages/PictureDay/index.html">Перейти к изображению дня</a>
+            </section>
 
-        <main>
-            <div class="planet-info">
-                <section class="Mercury" id="Mercury">
-                    <div class="Planet_content">
-                        <h2>Меркурий</h2>
-                        <p>Меркурий — это самая маленькая и ближайшая к Солнцу планета в нашей Солнечной системе. Её поверхность похожа на поверхность Луны. Она имеет много кратеров и высокие температуры.</p>
-                    </div>
-                    <div class="Planet_image">
-                        <img src="assets/images/Planet_Surface/Mercury_Surface.jpg" alt="Поверхность Меркурия">
-                    </div>
-                </section>
-            </div>
-        </main>
-        
+            <section class="interactive-map-section card">
+                <h3>Интерактивная карта</h3>
+                <p>Используйте карту для исследования звёзд, планет и галактик.</p>
+                <a href="pages/InteractiveMap/index.html">Перейти к карте</a>
+            </section>
+        </div>
+    </main>
 
-        <footer>
-            <p>&copy; г. 2024 @GamingHackintosh. All Rights Reserved.</p>
-        </footer>
-
-    </body>
+    <!--- Scripts --->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
 </html>

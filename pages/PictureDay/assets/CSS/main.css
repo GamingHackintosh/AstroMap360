@@ -1,0 +1,80 @@
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #1b2735 0%, #090a0f 100%);
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+/*===== Самый низ =====*/ 
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+
+
+
+/* Стили для блока с изображением дня */
+#apod {
+    width: 50%;
+    margin: auto;
+}
+#apod:hover {
+    transform: scale(1.05);
+}
+#apod-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 20px; 
+    align-items: center; 
+}
+
+/* Стили для изображения дня */
+#apodImage {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+}
+#apodImage:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.75);
+}
+
+#apod-image {
+    grid-column: 1 / 2; 
+    transition: transform 0.3s ease-in-out;
+}
+
+#apod-Text {
+    grid-column: 2 / 3; 
+    color: #fff;
+}
+
+#apodTitle {
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+}

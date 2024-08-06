@@ -1,0 +1,37 @@
+.card {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Индивидуальные стили для каждой карточки */
+.welcome-section h2, 
+.picture-day-section h3, 
+.interactive-map-section h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: 'Jost', sans-serif;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-section p,
+.picture-day-section p,
+.interactive-map-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-family: 'Jost', sans-serif;
+    color: #dcdcdc;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
