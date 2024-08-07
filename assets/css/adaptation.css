@@ -1,0 +1,6 @@
+/*=== HEADER (Mobile) ===*/
+@media (max-width: 768px)  {
+    header {
+        font-size: 13px;
+    }
+}
