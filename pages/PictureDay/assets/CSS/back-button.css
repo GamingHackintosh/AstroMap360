@@ -1,0 +1,20 @@
+#back-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#back-button-container a {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: var(--color-text);
+    background: linear-gradient(135deg, #ffcc00, #ff6600);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+#back-button-container a:hover {
+    background: linear-gradient(135deg, #ff9900, #ff3300);
+    transform: translateY(-5px);
+}

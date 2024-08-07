@@ -9,16 +9,48 @@ html, body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-header, footer {
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-    box-sizing: border-box;
-}
-
 body {
     background: url("../images/backround/backgroud-2.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* text */
+h2, h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    font-family: "Oswald-Bold";
+
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    
+    
+    text-decoration: none;
+
+    transition: background-color 0.3s ease;
+}
+a:hover {
+    background-color: var( --color-primary-hover);
 }
