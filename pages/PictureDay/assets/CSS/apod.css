@@ -1,0 +1,48 @@
+#apod {
+    width: 60%;
+    margin: auto;
+}
+
+#apod-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    
+    padding: 20px;
+    border-radius: 15px;
+
+    background: linear-gradient(135deg, #1b2735 0%, #090a0f 100%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#apodImage {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+#apodImage:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.75);
+    transform: scale(1.05);
+}
+
+#apod-Text {
+    color: #fff;
+    padding: 20px;
+}
+
+#apodTitle {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#apodDescription {
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.5;
+}

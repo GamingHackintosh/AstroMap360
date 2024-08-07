@@ -17,7 +17,7 @@ body {
                 center 
                 fixed;
     background-size: cover;
-    color: #ffffff;
+    color: var(--color-text);
 }
 
 section {
@@ -48,12 +48,17 @@ a {
     display: inline-block;
     padding: 10px 20px;
     font-size: 1.2em;
-    color: #ffffff;
-    background-color: #0066cc;
-    text-decoration: none;
     border-radius: 5px;
+    font-family: "Oswald-Bold";
+
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    
+    
+    text-decoration: none;
+
     transition: background-color 0.3s ease;
 }
 a:hover {
-    background-color: #ffcc00;
+    background-color: var( --color-primary-hover);
 }

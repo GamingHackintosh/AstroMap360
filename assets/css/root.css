@@ -1,0 +1,24 @@
+:root {
+    /* Цвета */
+    --color-primary: #0066cc;
+    --color-primary-hover: #ffcc00;
+    --color-background: #000044;
+    --color-background-dark: rgba(0, 0, 50, 0.9);
+    --color-background-darker: rgba(0, 0, 70, 0.9);
+    --color-background-overlay: rgba(0, 0, 0, 0.7);
+    --color-text: #ffffff;
+    --color-text-secondary: #dcdcdc;
+    --color-shadow: rgba(0, 0, 0, 0.7);
+    --color-shadow-light: rgba(0, 0, 0, 0.3);
+    --color-border: rgba(255, 255, 255, 0.2);
+    --color-highlight: #ffcc00;
+    --color-highlight-hover: #ff6600;
+    --color-highlight-hover-dark: #ff9900;
+    --color-highlight-hover-darker: #ff3300;
+
+    /* Тени */
+    --box-shadow: 0 4px 12px var(--color-shadow);
+    --box-shadow-light: 0 4px 8px var(--color-shadow-light);
+    --box-shadow-hover: 0 8px 24px var(--color-shadow);
+    --box-shadow-hover-light: 0 8px 16px var(--color-shadow-light);
+}

@@ -8,5 +8,5 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["PictureDay/assets/Scripts/*.ts", "PictureDay/assets/Scripts/API/api.ts", "PictureDay/assets/Scripts/APP/app.ts"]
+  "include": ["pages/PictureDay/assets/js/APP/app.ts"]
 }

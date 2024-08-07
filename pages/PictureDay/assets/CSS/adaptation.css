@@ -1,10 +1,40 @@
 /*===== Адаптация =====*/
-/* Стили для маленьких экранов (мобильные телефоны) */
-@media (max-width: 600px) {
+
+/*=== Apod.css ===*/
+@media (max-width: 1200px) {
+    #apod {
+        width: 80%;
+    }
+
     #apod-container {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: 100%;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    #apod-Text {
+        text-align: center;
+        padding: 10px;
+    }
+
+    #apodTitle {
+        font-size: 2rem;
+    }
+
+    #apodDescription {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #apod {
+        width: 95%;
+    }
+
+    #apodTitle {
+        font-size: 1.8rem;
+    }
+
+    #apodDescription {
+        font-size: 0.9rem;
     }
 }
