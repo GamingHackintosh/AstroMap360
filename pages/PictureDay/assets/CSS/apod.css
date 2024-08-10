@@ -68,7 +68,7 @@
 
 #apod-translateButton:hover {
     background: linear-gradient(135deg, #6a6ffb 0%, #bdbdff 100%);
-    transform: translateY(-2px);
+    transform: translateY(-5px);
 }
 
 #apod-translateButton:active {

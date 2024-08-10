@@ -9,7 +9,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 const API_KEY = 'AkrAPSTudQbZDrOqWI1RdTaWmAK6bnjcFycwe1eb';
 const APOD_URL = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`;
-// TypeScript: функция для запроса к API с уточнённым возвращаемым типом
 export function fetchAstronomyPictureOfTheDay() {
     return __awaiter(this, void 0, void 0, function* () {
         try {

@@ -39,13 +39,13 @@ p {
 a {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 1.2em;
     border-radius: 5px;
+
+    font-size: 1.2em;
     font-family: "Oswald-Bold";
 
     color: var(--color-text);
     background-color: var(--color-primary);
-    
     
     text-decoration: none;
 

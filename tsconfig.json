@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "es6", 
-    "strict": true,
-    "esModuleInterop": true,
-    "lib": ["es6", "dom"], 
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "module": "ES6",
+    "target": "ES6",
+      "rootDir": "./pages/PictureDay",   /* Установить корневую директорию для входных файлов. */
+      "outDir": "./pages/PictureDay",    /* Директория для скомпилированных файлов. */
+      "strict": true,                    /* Включить строгий режим проверки типов. */
+      "esModuleInterop": true,           /* Совместимость с ES модулями. */
+      "skipLibCheck": true,              /* Пропустить проверку типов в библиотеках. */
+      "forceConsistentCasingInFileNames": true, /* Принудительно использовать одинаковое написание имен файлов. */
   },
-  "include": ["pages/PictureDay/assets/js/APP/app.ts"]
+  "include": [
+      "pages/PictureDay/**/*.ts"         /* Включить все файлы .ts в папке PictureDay. */
+  ],
+  "exclude": [
+      "node_modules"                     /* Исключить папку node_modules. */
+  ]
 }
