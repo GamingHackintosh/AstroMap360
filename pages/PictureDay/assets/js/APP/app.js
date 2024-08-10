@@ -22,23 +22,48 @@ document.addEventListener('DOMContentLoaded', () => __awaiter(void 0, void 0, vo
         apodDescription.textContent = apodData.explanation;
     }
 }));
-/*=== Translate ===*/
+const apiKey = 'sk--oDNblqHENeA_v6DqMx824iS5GJATvV4FK6HB1yVmZT3BlbkFJlTmGy2x69EuEENdmW7h5jGZPUu-mcCnrJPRw486rAA'; // Замените на ваш реальный ключ API
 function translateText(text, targetLang) {
     return __awaiter(this, void 0, void 0, function* () {
-        const res = yield fetch("https://libretranslate.com/translate", {
-            method: "POST",
+        const url = 'https://api.openai.com/v1/chat/completions';
+        const prompt = `Translate the following text to ${targetLang}:\n\n${text}`;
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${apiKey}`
+            },
             body: JSON.stringify({
-                q: text,
-                source: "auto",
-                target: targetLang,
-                format: "text",
-                alternatives: 3,
-                api_key: ""
-            }),
-            headers: { "Content-Type": "application/json" }
-        });
-        const data = yield res.json();
-        return data.translatedText;
+                model: 'gpt-3.5-turbo', // Или используйте другую модель GPT, например, gpt-4
+                messages: [
+                    {
+                        role: 'system',
+                        content: 'You are a helpful assistant that translates text.'
+                    },
+                    {
+                        role: 'user',
+                        content: prompt
+                    }
+                ],
+                max_tokens: 1000 // Максимальное количество токенов в ответе
+            })
+        };
+        try {
+            const response = yield fetch(url, options);
+            const result = yield response.json();
+            console.log('API Response:', result); // Выводим полный ответ в консоль
+            if (result && result.choices && result.choices.length > 0) {
+                return result.choices[0].message.content.trim();
+            }
+            else {
+                console.error('Неверный формат ответа:', result);
+                return 'Ошибка перевода';
+            }
+        }
+        catch (error) {
+            console.error('Ошибка перевода:', error);
+            return 'Ошибка перевода';
+        }
     });
 }
 (_a = document.getElementById('apod-translateButton')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', () => __awaiter(void 0, void 0, void 0, function* () {

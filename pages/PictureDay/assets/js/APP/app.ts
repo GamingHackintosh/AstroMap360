@@ -15,23 +15,49 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-/*=== Translate ===*/
-async function translateText(text: string, targetLang: string): Promise<string> {
-    const res = await fetch("https://libretranslate.com/translate", {
-        method: "POST",
-        body: JSON.stringify({
-            q: text,
-            source: "auto",
-            target: targetLang,
-            format: "text",
-            alternatives: 3,
-            api_key: ""
-        }),
-        headers: { "Content-Type": "application/json" }
-    });
+const apiKey = 'sk--oDNblqHENeA_v6DqMx824iS5GJATvV4FK6HB1yVmZT3BlbkFJlTmGy2x69EuEENdmW7h5jGZPUu-mcCnrJPRw486rAA'; // Замените на ваш реальный ключ API
 
-    const data = await res.json();
-    return data.translatedText;
+async function translateText(text: string, targetLang: string): Promise<string> {
+    const url = 'https://api.openai.com/v1/chat/completions';
+    const prompt = `Translate the following text to ${targetLang}:\n\n${text}`;
+
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`
+        },
+        body: JSON.stringify({
+            model: 'gpt-3.5-turbo', // Или используйте другую модель GPT, например, gpt-4
+            messages: [
+                {
+                    role: 'system',
+                    content: 'You are a helpful assistant that translates text.'
+                },
+                {
+                    role: 'user',
+                    content: prompt
+                }
+            ],
+            max_tokens: 1000 // Максимальное количество токенов в ответе
+        })
+    };
+
+    try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        console.log('API Response:', result); // Выводим полный ответ в консоль
+        
+        if (result && result.choices && result.choices.length > 0) {
+            return result.choices[0].message.content.trim();
+        } else {
+            console.error('Неверный формат ответа:', result);
+            return 'Ошибка перевода';
+        }
+    } catch (error) {
+        console.error('Ошибка перевода:', error);
+        return 'Ошибка перевода';
+    }
 }
 
 document.getElementById('apod-translateButton')?.addEventListener('click', async () => {
