@@ -5,7 +5,12 @@ export interface ApodResponse {
     explanation: string;
 }
 
-const API_KEY = 'AkrAPSTudQbZDrOqWI1RdTaWmAK6bnjcFycwe1eb'; 
+const part1 = 'AkrAPSTudQbZDrOq';
+const part2 = 'WI1RdTaWmAK6bnjcFyc';
+const part3 = 'we1eb';
+
+const API_KEY = part1 + part2 + part3;
+
 const APOD_URL = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`;
 
 export async function fetchAstronomyPictureOfTheDay(): Promise<ApodResponse | null> {

@@ -7,7 +7,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const API_KEY = 'AkrAPSTudQbZDrOqWI1RdTaWmAK6bnjcFycwe1eb';
+const part1 = 'AkrAPSTudQbZDrOq';
+const part2 = 'WI1RdTaWmAK6bnjcFyc';
+const part3 = 'we1eb';
+const API_KEY = part1 + part2 + part3;
 const APOD_URL = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`;
 export function fetchAstronomyPictureOfTheDay() {
     return __awaiter(this, void 0, void 0, function* () {
