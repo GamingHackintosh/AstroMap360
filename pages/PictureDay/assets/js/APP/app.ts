@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-const apiKey = 'sk--oDNblqHENeA_v6DqMx824iS5GJATvV4FK6HB1yVmZT3BlbkFJlTmGy2x69EuEENdmW7h5jGZPUu-mcCnrJPRw486rAA'; // Замените на ваш реальный ключ API
+const apiKey = 'sk-1CfPJEF48ZeXX0ZYJXNoJa3MIkV7skcKUI1NtR5pTgT3BlbkFJvfO8Ol14h_7-yT0SjNHCCzNzm-jhMlwqPiDFkTV7kA';
 
 async function translateText(text: string, targetLang: string): Promise<string> {
     const url = 'https://api.openai.com/v1/chat/completions';
@@ -46,7 +46,7 @@ async function translateText(text: string, targetLang: string): Promise<string> 
     try {
         const response = await fetch(url, options);
         const result = await response.json();
-        console.log('API Response:', result); // Выводим полный ответ в консоль
+        console.log('API Response:', result);
         
         if (result && result.choices && result.choices.length > 0) {
             return result.choices[0].message.content.trim();
