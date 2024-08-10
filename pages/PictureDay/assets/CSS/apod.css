@@ -13,23 +13,23 @@
     border-radius: 15px;
 
     background: linear-gradient(135deg, #1b2735 0%, #090a0f 100%);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 12px var(--color-shadow);
     transition: box-shadow 0.3s ease-in-out;
 }
 
 #apodImage {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 12px var(--color-shadow);
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 #apodImage:hover {
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.75);
+    box-shadow: var(--box-shadow);
     transform: scale(1.05);
 }
 
 #apod-Text {
-    color: #fff;
+    color: var(--color-text);
     padding: 20px;
 }
 
@@ -40,9 +40,38 @@
     margin-bottom: 10px;
 }
 
+#apod-desc {
+    display: flex;
+    flex-direction: column;
+}
 #apodDescription {
     font-family: "Jersey 15", sans-serif;
     font-size: 1.2rem;
     text-align: center;
     line-height: 1.5;
+}
+
+
+/*=== Button ===*/
+#apod-translateButton {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#apod-translateButton:hover {
+    background: linear-gradient(135deg, #6a6ffb 0%, #bdbdff 100%);
+    transform: translateY(-2px);
+}
+
+#apod-translateButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
