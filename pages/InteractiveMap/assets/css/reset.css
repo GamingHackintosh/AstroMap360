@@ -19,3 +19,21 @@ body {
     background-size: cover;
     color: var(--color-text);
 }
+
+/*=== TEXT ===*/
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #f4e242;
+}
+p {
+    font-size: 1.2em;
+    margin-top: 5px;
+    color: #d3d3d3;
+}
+
+
+main {
+    padding: 20px;
+    text-align: center;
+}

@@ -1,39 +1,73 @@
-var stars = [];
-for (var i = 0; i < 100; i++) {
-  stars.push({
-    ra: Math.random() * 360,
-    dec: Math.random() * 90,
-    mag: Math.random() * 10,
-    color: 'rgb(' + Math.round(Math.random() * 255) + ',' + Math.round(Math.random() * 255) + ',' + Math.round(Math.random() * 255) + ')'
-  });
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('map-container');
+    const width = container.clientWidth;
+    const height = 500;
+    const gWidth = width * 3; // Увеличиваем ширину группы <g> для размещения всех планет
 
-var svg = d3.select('#map-container')
-  .append('svg')
-  .attr('width', 800)
-  .attr('height', 600);
+    // Создаем SVG и группу <g>
+    const svg = d3.select('#map-container').append('svg')
+        .attr('width', width)
+        .attr('height', height);
 
-svg.selectAll('circle')
-  .data(stars)
-  .enter()
-  .append('circle')
-  .attr('cx', function(d) {
-    return Math.cos(d.ra * Math.PI / 180) * 400 + 400;
-  })
-  .attr('cy', function(d) {
-    return Math.sin(d.dec * Math.PI / 180) * 300 + 300;
-  })
-  .attr('r', function(d) {
-    return d.mag * 2;
-  })
-  .style('fill', function(d) {
-    return d.color;
-  });
+    const g = svg.append('g')
+        .attr('width', gWidth)
+        .attr('height', height);
 
-svg.selectAll('circle')
-  .on('mouseover', function(d) {
-    d3.select(this).style('fill', 'red');
-  })
-  .on('mouseout', function(d) {
-    d3.select(this).style('fill', d.color);
-  });
+    // Настраиваем зум и ограничиваем область перемещения
+    const zoom = d3.zoom()
+        .scaleExtent([0.5, 2]) // Ограничение на масштабирование
+        .translateExtent([[0, 0], [gWidth, height]]) // Ограничение на перемещение
+        .on('zoom', (event) => {
+            g.attr('transform', event.transform);
+        });
+
+    svg.call(zoom);
+
+    // Массив данных о планетах
+    const planets = [
+        { name: 'Меркурий', distance: 0.39, radius: 2.4, image: 'assets/img/planets/Mercury.png' },
+        { name: 'Венера', distance: 0.95, radius: 6.1, image: 'assets/img/planets/Venus.png' },
+        { name: 'Земля', distance: 1.5, radius: 6.3, image: 'assets/img/planets/Earth.png' },
+        { name: 'Марс', distance: 2.5, radius: 3.4, image: 'assets/img/planets/Mars.png' },
+        { name: 'Юпитер', distance: 5.2, radius: 69.9, image: 'assets/img/planets/Jupiter.png' },
+        { name: 'Сатурн', distance: 9.58, radius: 58.2, image: 'assets/img/planets/Saturn.png' },
+        { name: 'Уран', distance: 19.2, radius: 25.4, image: 'assets/img/planets/Uranus.png' },
+        { name: 'Нептун', distance: 30.05, radius: 24.6, image: 'assets/img/planets/Neptune.png' }
+    ];
+
+    // Масштабирование дистанции и радиуса планет
+    const maxPlanetSize = 435; // Максимальный размер планеты в пикселях
+    const padding = 50; // Отступ между планетами
+    const scaleDistance = d3.scaleLinear().domain([0, 30]).range([padding, gWidth - maxPlanetSize - padding]);
+    const scaleRadius = d3.scaleSqrt().domain([0, 70]).range([10, maxPlanetSize / 2]);
+
+    // Отрисовка планет
+    g.selectAll('image')
+        .data(planets)
+        .enter()
+        .append('image')
+        .attr('xlink:href', d => d.image)
+        .attr('x', d => scaleDistance(d.distance))
+        .attr('y', height / 2 - maxPlanetSize / 2) // Центрируем по вертикали
+        .attr('width', d => scaleRadius(d.radius) * 2)
+        .attr('height', d => scaleRadius(d.radius) * 2)
+        .attr('class', 'planet')
+        .on('mouseover', function (event, d) {
+            d3.select('#tooltip')
+                .style('left', `${event.pageX + 5}px`)
+                .style('top', `${event.pageY - 28}px`)
+                .style('display', 'block')
+                .html(`<strong>${d.name}</strong><br>Радиус: ${d.radius} тыс. км<br>Расстояние от Солнца: ${d.distance} а.е.`);
+        })
+        .on('mouseout', () => d3.select('#tooltip').style('display', 'none'));
+
+    // Tooltip
+    d3.select('body').append('div').attr('id', 'tooltip')
+        .style('position', 'absolute')
+        .style('padding', '10px')
+        .style('background', 'rgba(0, 0, 0, 0.7)')
+        .style('color', '#fff')
+        .style('border-radius', '4px')
+        .style('pointer-events', 'none')
+        .style('display', 'none');
+});

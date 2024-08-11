@@ -1,0 +1,36 @@
+header, .header_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid var(--color-primary);
+
+
+    animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+    font-size: 3em;
+    font-family: 'Anton', sans-serif;
+    
+    color: var(--color-text);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+    margin-bottom: 10px;
+
+    animation: slideIn 1.5s ease-in-out;
+}
+
+header p {
+    font-size: 1.5em;
+    font-family: 'Jost', sans-serif;
+
+    color: var(--color-text);
+    text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.574);
+    
+    animation: slideIn 1.5s ease-in-out 0.5s;
+}

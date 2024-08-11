@@ -1,14 +1,52 @@
+/*=== SOLAR SYSTEM MAP SECTION ===*/
+#solar-system-map {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px var(--color-shadow-light);
+    margin-top: 20px;
+}
+
+#solar-system-map h2 {
+    font-size: 2rem;
+    color: var(--color-highlight);
+    text-shadow: 2px 2px 8px var(--color-highlight);
+    margin-bottom: 20px;
+    font-family: 'Anton', sans-serif;
+}
+
+/*=== MAP CONTAINER ===*/
 #map-container {
     width: 100%;
-    height: 500px;
+    height: auto;
     position: relative;
+    background: url('../img/backgrounds/background-1.jpg') 
+                no-repeat 
+                center 
+                center 
+                fixed;
+    background-size: cover;
+    border: 3px solid var(--color-highlight);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px var(--color-shadow-light);
+}
+#map-container image {
+    width: 300px;
 }
 
-.star {
-    fill: white;
-    cursor: pointer;
-}
 
+/*=== TOOLTIP ===*/
 #tooltip {
     z-index: 9999;
+    background: var(--color-background-overlay);
+    color: var( --color-text);
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 8px var(--box-shadow-light);
 }
